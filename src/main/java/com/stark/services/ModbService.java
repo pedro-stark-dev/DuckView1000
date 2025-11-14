@@ -1,5 +1,6 @@
 package com.stark.services;
 
+import com.ghgande.j2mod.modbus.Modbus;
 import com.ghgande.j2mod.modbus.io.ModbusSerialTransaction;
 import com.ghgande.j2mod.modbus.msg.*;
 import com.ghgande.j2mod.modbus.net.SerialConnection;
@@ -11,20 +12,26 @@ public class ModbService {
 
     private SerialConnection connection;
 
-    public void connect(ModbusEntity cfg) throws Exception {
+    public void connect(ModbusEntity cfg) {
+        try {
+            connection = new SerialConnection(new SerialParameters() {{
+                setPortName(cfg.getPort());
+                setBaudRate(cfg.getBaudRate());
+                setDatabits(cfg.getDataBits());
+                setStopbits(cfg.getStopBits());
+                setParity(cfg.getParity());
+                setEncoding(Modbus.SERIAL_ENCODING_RTU);
+                setEcho(false);
+            }});
 
-        SerialParameters params = new SerialParameters();
-        params.setPortName(cfg.getPort());
-        params.setBaudRate(cfg.getBaudRate());
-        params.setDatabits(cfg.getDataBits());
-        params.setStopbits(cfg.getStopBits());
-        params.setParity(cfg.getParity());
-        params.setEncoding("rtu");
-        params.setEcho(false);
+            System.out.println("➡ Abrindo porta: " + cfg.getPort());
+            connection.open();
+            System.out.println("✔ Porta aberta com sucesso!");
 
-        connection = new SerialConnection(params);
-        connection.open();
-        System.out.println("Modbus RTU conectado");
+        } catch (Exception e) {
+            System.err.println("❌ Falha ao abrir porta serial!");
+            e.printStackTrace();
+        }
     }
 
     public void disconnect() {
