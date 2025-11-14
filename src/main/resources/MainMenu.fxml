@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: linear-gradient(to bottom, #2b2b2b, #404040);">
+
+    <!-- TOP - Título -->
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #1a1a1a; -fx-padding: 15;">
+            <Label text="CONTROLE INDUSTRIAL - CLP"
+                   style="-fx-text-fill: #e0e0e0; -fx-font-weight: bold; -fx-font-size: 24;">
+                <font>
+                    <Font name="System Bold" size="24.0" />
+                </font>
+            </Label>
+            <Separator style="-fx-background-color: #ff6b35; -fx-pref-width: 300;" />
+        </VBox>
+    </top>
+
+    <!-- CENTER - Botões principais com LEDs -->
+    <center>
+        <GridPane hgap="20" vgap="30" style="-fx-padding: 30;" alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="80" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="80" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="80" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="80" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="80" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="80" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="80" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" minHeight="50" />
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" minHeight="100" />
+            </rowConstraints>
+
+            <!-- LEDs Status -->
+            <StackPane alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Circle radius="18.0" fill="#666666" stroke="#000000" strokeWidth="2" />
+                <Circle radius="12.0" fill="#ff4444" stroke="#000000" strokeWidth="1" />
+            </StackPane>
+            <StackPane alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Circle radius="18.0" fill="#666666" stroke="#000000" strokeWidth="2" />
+                <Circle radius="12.0" fill="#ff4444" stroke="#000000" strokeWidth="1" />
+            </StackPane>
+            <StackPane alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                <Circle radius="18.0" fill="#666666" stroke="#000000" strokeWidth="2" />
+                <Circle radius="12.0" fill="#ff4444" stroke="#000000" strokeWidth="1" />
+            </StackPane>
+            <StackPane alignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                <Circle radius="18.0" fill="#666666" stroke="#000000" strokeWidth="2" />
+                <Circle radius="12.0" fill="#ff4444" stroke="#000000" strokeWidth="1" />
+            </StackPane>
+            <StackPane alignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                <Circle radius="18.0" fill="#666666" stroke="#000000" strokeWidth="2" />
+                <Circle radius="12.0" fill="#ff4444" stroke="#000000" strokeWidth="1" />
+            </StackPane>
+            <StackPane alignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="0">
+                <Circle radius="18.0" fill="#666666" stroke="#000000" strokeWidth="2" />
+                <Circle radius="12.0" fill="#ff4444" stroke="#000000" strokeWidth="1" />
+            </StackPane>
+            <StackPane alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="0">
+                <Circle radius="18.0" fill="#666666" stroke="#000000" strokeWidth="2" />
+                <Circle radius="12.0" fill="#ff4444" stroke="#000000" strokeWidth="1" />
+            </StackPane>
+
+            <!-- Botões Redondos -->
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <Button mnemonicParsing="false"
+                        style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-min-width: 80; -fx-min-height: 80; -fx-max-width: 120; -fx-max-height: 120; -fx-background-color: linear-gradient(to bottom, #8c8c8c, #666666); -fx-border-color: #000000; -fx-border-width: 3; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 2, 2);"
+                        text="MOTOR 1" />
+            </VBox>
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Button mnemonicParsing="false"
+                        style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-min-width: 80; -fx-min-height: 80; -fx-max-width: 120; -fx-max-height: 120; -fx-background-color: linear-gradient(to bottom, #8c8c8c, #666666); -fx-border-color: #000000; -fx-border-width: 3; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 2, 2);"
+                        text="MOTOR 2" />
+            </VBox>
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <Button mnemonicParsing="false"
+                        style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-min-width: 80; -fx-min-height: 80; -fx-max-width: 120; -fx-max-height: 120; -fx-background-color: linear-gradient(to bottom, #8c8c8c, #666666); -fx-border-color: #000000; -fx-border-width: 3; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 2, 2);"
+                        text="BOMBA" />
+            </VBox>
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                <Button mnemonicParsing="false"
+                        style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-min-width: 80; -fx-min-height: 80; -fx-max-width: 120; -fx-max-height: 120; -fx-background-color: linear-gradient(to bottom, #8c8c8c, #666666); -fx-border-color: #000000; -fx-border-width: 3; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 2, 2);"
+                        text="VENT" />
+            </VBox>
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                <Button mnemonicParsing="false"
+                        style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-min-width: 80; -fx-min-height: 80; -fx-max-width: 120; -fx-max-height: 120; -fx-background-color: linear-gradient(to bottom, #8c8c8c, #666666); -fx-border-color: #000000; -fx-border-width: 3; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 2, 2);"
+                        text="VÁLVULA" />
+            </VBox>
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                <Button mnemonicParsing="false"
+                        style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-min-width: 80; -fx-min-height: 80; -fx-max-width: 120; -fx-max-height: 120; -fx-background-color: linear-gradient(to bottom, #8c8c8c, #666666); -fx-border-color: #000000; -fx-border-width: 3; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 2, 2);"
+                        text="AQUEC" />
+            </VBox>
+            <VBox alignment="CENTER" spacing="5" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                <Button mnemonicParsing="false"
+                        style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-min-width: 80; -fx-min-height: 80; -fx-max-width: 120; -fx-max-height: 120; -fx-background-color: linear-gradient(to bottom, #8c8c8c, #666666); -fx-border-color: #000000; -fx-border-width: 3; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 2, 2);"
+                        text="ESTEIRA" />
+            </VBox>
+        </GridPane>
+    </center>
+
+    <!-- BOTTOM - Botões de controle -->
+    <bottom>
+        <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #333333; -fx-padding: 20; -fx-border-color: #ff6b35; -fx-border-width: 2 0 0 0;">
+            <Button mnemonicParsing="false"
+                    style="-fx-background-color: linear-gradient(to bottom, #4CAF50, #2E7D32); -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-padding: 15 30; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 1, 1); -fx-min-width: 150;"
+                    text="START" />
+
+            <Button mnemonicParsing="false"
+                    style="-fx-background-color: linear-gradient(to bottom, #757575, #424242); -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-padding: 15 30; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 1, 1); -fx-min-width: 150;"
+                    text="MENU" />
+
+            <Button mnemonicParsing="false"
+                    style="-fx-background-color: linear-gradient(to bottom, #ff9800, #ef6c00); -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-padding: 10 25; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 1, 1); -fx-min-width: 120;"
+                    text="ALERTS" />
+
+            <Button mnemonicParsing="false"
+                    style="-fx-background-color: linear-gradient(to bottom, #f44336, #c62828); -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-padding: 10 25; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 1, 1); -fx-min-width: 120;"
+                    text="RESET" />
+        </HBox>
+    </bottom>
+</BorderPane>
